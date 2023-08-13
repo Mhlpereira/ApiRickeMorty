@@ -1,0 +1,12 @@
+body {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+#data {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
+}
