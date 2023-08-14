@@ -9,11 +9,26 @@ function dados() {
     .get(`https://rickandmortyapi.com/api/character/?page=${paginaAtual}`)
     .then((result) => {
       data.innerHTML = "";
+      const ultimoEps = result.episode.
       result.data.results.forEach((personagens) => {
-        data.innerHTML += `<div class="personagens">
+        data.innerHTML += `<div class="card">
                 <figure>
                 <img src="${personagens.image}" alt="${personagens.name}">
                 </figure>
+                <aside>
+                <div class="card-titulo">
+                <h1>${personagens.name}</h1>
+                <span>${personagens.status} ${personagens.species}</span>
+                </div>
+                // <div>
+                // <span>Last know location:</span>
+                // <span>${personagens.location}</span>
+                // <span>Firt seen in</span>
+                // <span>${personagens.episode}</span>
+                // </div>
+
+                </aside>
+
             </div>`;
       });
     
@@ -34,12 +49,12 @@ function verificarPagina(totalDePaginas) {
   }
 }
 
-function proximo() {
+async function proximo() {
   paginaAtual++;
   dados();
 }
 
-function anterior() {
+async function anterior() {
   paginaAtual--;
   dados();
 }
