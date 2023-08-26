@@ -5,18 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Api</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="data"></div>
-    <div id="botoes">
-      <button id="btnAnterior" onclick="anterior()">Anterior</button>
-      <button id="btnProximo" onclick="proximo()">Proximo</button>
-    </div>
-    <img
-      id="logo"
-      src="./asserts/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png"
-      alt="logo"
-    />
+    <header>
+      <img class="banner" src="./asserts/ricky.jpg"></header>
+    </header>
+    <main>
+      <h1 class="titulo-pagina">API RICK E MORTY</h1>
+      <div id="data"></div>
+      <div class="pagination">
+        <button id="btnAnterior" class="btn" onclick="anterior()">Anterior</button>
+        <button id="btnProximo" class="btn" onclick="proximo()">Proximo</button>
+      </div>
+    </main>
+    <footer>
+      <div class="contadores">
+        <span class="contador-titulo">Characters:</span>
+        <span class="contador-numero" id="personagem"></span>
+        <span class="contador-titulo">Locations:</span>
+        <span class="contador-numero" id="local"></span>
+        <span class="contador-titulo">Episodes:</span>
+        <span class="contador-numero" id="eps"></span>
+        </div>
+      <img
+        class="logo"
+        src="./asserts/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png"
+        alt="logo"
+      />
+      <p>Desenvolvido por Mário Henrique em 2023</p>
+    </footer>
   </body>
   <script src="./index.js"></script>
 </html>
